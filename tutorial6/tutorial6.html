@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Clothing store</title>
+        <script>
+            async function updateQuantity(itemId, quantity) {
+                const updatedQuantity = await fetch("http://localhost:1202/item/" + itemId, {
+                    method: 'put',
+                    body: quantity
+                });
+                document.querySelector("#item" + itemId + " .quantity").innerHTML = await updatedQuantity.text()
+            }
+            function add(itemId) {
+                quantity = Number(document.querySelector("#item" + itemId + " .quantity").innerHTML)
+                updateQuantity(itemId, quantity + 1)
+            }
+            function remove(itemId) {
+                quantity = Number(document.querySelector("#item" + itemId + " .quantity").innerHTML)
+                updateQuantity(itemId, Math.max(quantity, 0))
+            }
+            async function displayItems() {
+                const itemHtml = await fetch("http://localhost:1202/items", { mode: 'no-cors' });
+                document.querySelector("#items").innerHTML = await itemHtml.text();
+            }
+        </script>
+        <style>
+            .item {
+                float: left;
+                border: 1px solid;
+                margin: 20px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body onload="displayItems()">
+        <h1>Clothing store</h1>
+        <div id="items"></div>
+    </body>
+</html>

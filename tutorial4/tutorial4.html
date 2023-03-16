@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Clothing store</title>
+        <script>
+            async function displayItems() {
+                const itemHtml = await fetch("http://localhost:1202/items", { mode: 'no-cors' });
+                document.querySelector("#items").innerHTML = await itemHtml.text();
+            }
+        </script>
+        <style>
+            .item {
+                float: left;
+                border: 1px solid;
+                margin: 20px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body onload="displayItems()">
+        <h1>Clothing store</h1>
+        <div id="items"></div>
+    </body>
+</html>
