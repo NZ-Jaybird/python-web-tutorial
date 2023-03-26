@@ -1,9 +1,9 @@
-The intent of this tutorial series is to progress through different possible ways to structure a webapp. The tutorials use an ecommerce concept - simply a page displaying various items. For now, the descriptions below are very high level and do not fairly represent the time and effort I put into producing each tutorial. I hope to go back over them and provide a more helpful level of detail.
+The intent of this tutorial series is to progress through different possible ways to structure a webapp. The tutorials use a simple ecommerce concept - a page displaying various products.
 
 
 -- Tutorial 1 --
 
-Tutorial 1 starts off this series with a static webpage. Using simple HTML and CSS, create a page that displays a few similar items that vary by a few properties. For example, I've used different types of clothes, each with a given size and colour. Ideally keep the HTML and CSS consistent for each item so that we can extract a template for them in Tutorial 2.
+Tutorial 1 starts off this series with a static webpage. Using simple HTML and CSS, create a page that displays a few similar items that vary by a few properties. For example, I've used different types of clothes, each with a given size and colour. Try to use the same HTML and CSS for each item so that we can extract a template for them in Tutorial 2.
 
 
 -- Tutorial 2 --
