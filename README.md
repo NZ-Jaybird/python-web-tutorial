@@ -13,12 +13,12 @@ Using the properties for the items you created in Tutorial 1, write a python scr
 
 -- Tutorial 3 --
 
-I added this as a placeholder for an intermediate step between Tutorial 2 and Tutorial 4. Feel free to skip it as I did, at least until I have time to add this section. I intended to have the python http server (see tutorial 4) serve the items as a JSON file, but still having the webpage running directly from the HTML file and generating the item HTML in javascript.
+Using python library code from http.server, it is possible to create a minimal http server - that is, a program that responds to http requests, for example from a webpage being loaded in the browser. In this tutorial, the http server listens for requests to http://localhost:1202/items.json and returns the items in JSON format. This means the web page can request the item data in javascript instead of having to load a separate file. To do this, use the javascript Fetch API.
 
 
 -- Tutorial 4 --
 
-Using python library code from http.server, it is possible to create a minimal http server - that is, a program that responds to http requests, for example from a webpage being loaded in the browser. In this tutorial, the http server listens to http://localhost:1202. When this URL is entered in the browser, the server returns the HTML file we are working on. However, we can add javascript inside that HTML file that requests data at http://localhost:1202/items instead of reading the items from the javascript file we created in Tutorial 2. In addition, we can also make the python http server return the chunk of HTML we need to insert directly into the document.
+Extend the http server to return the html file for requests to http://localhost:1202/. Now instead of opening the html file in your browser, open the URL http://localhost:1202/ in your browser. Next, instead of having an endpoint that returns the JSON data, generate the HTML for the items with python. Replace the items.json endpoint with just an items endpoint, i.e. http://localhost:1202/items which returns that HTML. Finally, update the web page javascript to fetch that HTML chunk and insert it directly into the document.
 
 
 -- Tutorial 5 --

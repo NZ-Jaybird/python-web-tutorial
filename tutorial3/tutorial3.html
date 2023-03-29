@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Clothing store</title>
+        <script>
+            function initialUpper(str) {
+                return str[0].toUpperCase() + str.substring(1)
+            }
+            async function displayItems() {
+                const response = await fetch("http://localhost:1202/items.json")
+                const items = await response.json()
+
+                for (item of items) {
+                    document.querySelector("#items").innerHTML += `
+                        <div class="item">
+                            <b>Garment:</b> ${initialUpper(item.garment)}
+                            <br />
+                            <b>Colour:</b> ${initialUpper(item.colour)}
+                            <br />
+                            <b>Size:</b> ${item.size}
+                        </div>`;
+                }
+            }
+        </script>
+        <style>
+            .item {
+                float: left;
+                border: 1px solid;
+                margin: 20px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body onload="displayItems()">
+        <h1>Clothing store</h1>
+        <div id="items"></div>
+    </body>
+</html>

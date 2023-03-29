@@ -9,3 +9,8 @@ Ejercicio 1 es una pagina web estatica. Usa HTML y CSS básico hacer una página
 -- Ejercicio 2 --
 
 Escribe un guión de Python que genera cada combinación de las características de los productos que usted creó en el ejercicio 1. Hacer que el código python escriba todos estos datos en un archivo Javascript entonces la página web puede leer y mostrar estos. El método de HTML body.onload() puede transformar las características de productos a HTML y escribe esa en el documento de HTML.
+
+
+-- Ejercicio 3 --
+
+Usando el código de una biblioteca de python - http.server, es posible crear un servidor http mínimo. Es decir, un programa que responde a solicitudes http, por ejemplo una página web siendo exhibido en el navegador. En este ejercicio, el servidor http escucha solicitudes a http://localhost:1202/items.json y devuelve los datos del producto en formato json. Entonces la página web puede solicitar los datos del producto en javascript en lugar de tener que cargar un archivo javascript separado. Usando el Fetch API de javascript.
