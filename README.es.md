@@ -13,4 +13,4 @@ Escribe un guión de Python que genera cada combinación de las características
 
 -- Ejercicio 3 --
 
-Usando el código de una biblioteca de python - http.server, es posible crear un servidor http mínimo. Es decir, un programa que responde a solicitudes http, por ejemplo una página web siendo exhibido en el navegador. En este ejercicio, el servidor http escucha solicitudes a http://localhost:1202/items.json y devuelve los datos del producto en formato json. Entonces la página web puede solicitar los datos del producto en javascript en lugar de tener que cargar un archivo javascript separado. Usando el Fetch API de javascript.
+Usando el código de una biblioteca de python - http.server, es posible crear un servidor http mínimo. Es decir, un programa que responde a solicitudes http, por ejemplo una página web siendo exhibido en el navegador. En este ejercicio, el servidor http escucha solicitudes a http://localhost:1202/items.json y devuelve los datos del producto en formato json. Entonces la página web puede solicitar los datos del producto en javascript en lugar de tener que cargar un archivo javascript separado. Usa el Fetch API de javascript.
