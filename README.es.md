@@ -14,3 +14,8 @@ Escribe un guión de Python que genera cada combinación de las características
 -- Ejercicio 3 --
 
 Usando el código de una biblioteca de python - http.server, es posible crear un servidor http mínimo. Es decir, un programa que responde a solicitudes http, por ejemplo una página web siendo exhibido en el navegador. En este ejercicio, el servidor http escucha solicitudes a http://localhost:1202/items.json y devuelve los datos del producto en formato json. Entonces la página web puede solicitar los datos del producto en javascript en lugar de tener que cargar un archivo javascript separado. Usa el Fetch API de javascript.
+
+
+-- Ejercicio 4 --
+
+Extienda el servidor http para devolver el archivo html para solicitudes a http://localhost:1202/. En lugar de abrir el archivo html en tu navegador, abre la url http://localhost:1202/ en tu navegador. Luego, en lugar de un punto final que vuelve los datos json, genera html por los productos con python. Reemplazar el punto final items.json por solo un punto final productos, es decir,  http://localhost:1202/items que devuelve ese fragmento html. Luego, actualizar tu javascript para obtener ese fragmento html y lo inserta en el documento.

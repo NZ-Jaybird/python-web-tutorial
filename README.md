@@ -18,7 +18,7 @@ Using python library code from http.server, it is possible to create a minimal h
 
 -- Tutorial 4 --
 
-Extend the http server to return the html file for requests to http://localhost:1202/. Now instead of opening the html file in your browser, open the URL http://localhost:1202/ in your browser. Next, instead of having an endpoint that returns the JSON data, generate the HTML for the items with python. Replace the items.json endpoint with just an items endpoint, i.e. http://localhost:1202/items which returns that HTML. Finally, update the web page javascript to fetch that HTML chunk and insert it directly into the document.
+Extend the http server to return the html file for requests to http://localhost:1202/. Instead of opening the html file in your browser, open the URL http://localhost:1202/ in your browser. Next, instead of an endpoint that returns the JSON data, generate HTML for the items with python. Replace the items.json endpoint with just an items endpoint, i.e. http://localhost:1202/items which returns that HTML. Finally, update your javascript to fetch that HTML chunk and insert it directly into the document.
 
 
 -- Tutorial 5 --
