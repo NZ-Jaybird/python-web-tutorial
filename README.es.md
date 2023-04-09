@@ -19,3 +19,10 @@ Usando el código de una biblioteca de python - http.server, es posible crear un
 -- Ejercicio 4 --
 
 Extienda el servidor http para devolver el archivo html para solicitudes a http://localhost:1202/. En lugar de abrir el archivo html en tu navegador, abre la url http://localhost:1202/ en tu navegador. Luego, en lugar de un punto final que vuelve los datos json, genera html por los productos con python. Reemplazar el punto final items.json por solo un punto final productos, es decir,  http://localhost:1202/items que devuelve ese fragmento html. Luego, actualizar tu javascript para obtener ese fragmento html y lo inserta en el documento.
+
+
+-- Ejercicio 5 --
+
+En este ejercicio, añadir lógica del lado del cliente rastrear cantidad por cada producto. Añadir html a la plantilla de producto que muestra una etiqueta y valor para cantidad, y dos botones que aumentan y disminuyen respectivamente la cantidad de ese producto. Añadir un controlador de clics de javascript a estos botones que cambian el cantidad adecuadamente.
+
+Nota que porque los valores sólo almacenados en javascript, ellos serán restablecidos si la página está refrescada.
