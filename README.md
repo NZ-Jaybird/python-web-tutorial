@@ -30,9 +30,9 @@ Note that because the values are stored only in javascript, they will be reset i
 
 -- Tutorial 6 --
 
-In this tutorial, move the quantity logic to the server side. Change the click handlers of quantity buttons to send a request to the server. The request should include information about which item is changing and how it's quantity is changing. Add a handler in the python http server that processes the request and stores the quantities in some kind of variable or list. Update how the HTML is generated when the page is requested, so that the latest quantities are included.
+In this tutorial, move the quantity logic to the server side. Change the click handlers of quantity buttons to send a request to the server. The request should include information about which item is changing and how its quantity is changing. Add a handler in the python http server that processes the request and stores the quantities in some kind of variable or list. Update how the HTML is generated when the page is requested, so that the latest quantities are included.
 
-If done correctly, you should now be able to update the quantities on the page and then refresh the page without those values being reset. However, if the python script is restarted and the page refreshed, the quantities will then be reset.
+You should now be able to update the quantities on the page and then refresh the page without those values being reset. However, if the python script is restarted and the page refreshed, the quantities will then be reset.
 
 
 -- Tutorial 7 --

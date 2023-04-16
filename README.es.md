@@ -26,3 +26,12 @@ Extienda el servidor http para devolver el archivo html para solicitudes a http:
 En este ejercicio, añadir lógica del lado del cliente rastrear cantidad por cada producto. Añadir html a la plantilla de producto que muestra una etiqueta y valor para cantidad, y dos botones que aumentan y disminuyen respectivamente la cantidad de ese producto. Añadir un controlador de clics de javascript a estos botones que cambian el cantidad adecuadamente.
 
 Nota que porque los valores sólo almacenados en javascript, ellos serán restablecidos si la página está refrescada.
+
+
+-- Ejercicio 6 --
+
+
+Primero, mueve la lógica de cantidad al lado del servidor. Luego, cambia los controladores de clics de los botones de cantidad para enviar una solicitud al servidor. La solicitud debe incluir información sobre qué producto está cambiando y cómo su cantidad está cambiando. Añadir un controlador en el servidor http de python que procesa la solicitud y almacena las cantidades en una variable o lista. Actualizar cómo se genera el html cuando la página es solicitada, para que se incluyan las últimas cantidades.
+
+Deberías ahora puedes actualizar las cantidades en la página y refrescar la página sin que esas cantidades desaparezcan. Sin embargo, si el programa de python es reiniciado y la página es refrescada, las cantidades serán borradas.
+
