@@ -42,7 +42,7 @@ The last tutorial for now demonstrates the use of a database. You could use mysq
  - Create a new database 'shop', assigning the new user 'shop_tutorial' as the owner
  - Create a new table 'item', under the public schema in database 'shop', using this script: CREATE TABLE item (item_id varchar, quantity integer);
 
-To interact with this database from python, I've used the python library psycopg. Install with `pip install psycopg`. See the docs here: https://www.psycopg.org/docs/usage.html
+To control this database from the python script, I've used the python library psycopg. Install with `pip install psycopg`. See the docs here: https://www.psycopg.org/docs/usage.html
 
 In the python http handler for quantity updates, you'll need either a SQL insert query if there isn't a record yet for the item being updated, or a SQL update query if there is. When the python script first runs, initialize the quantity data from the database so that it's ready for the first page load.
 

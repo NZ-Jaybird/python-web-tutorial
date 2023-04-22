@@ -30,8 +30,20 @@ Nota que porque los valores sólo almacenados en javascript, ellos serán restab
 
 -- Ejercicio 6 --
 
-
 Primero, mueve la lógica de cantidad al lado del servidor. Luego, cambia los controladores de clics de los botones de cantidad para enviar una solicitud al servidor. La solicitud debe incluir información sobre qué producto está cambiando y cómo su cantidad está cambiando. Añadir un controlador en el servidor http de python que procesa la solicitud y almacena las cantidades en una variable o lista. Actualizar cómo se genera el html cuando la página es solicitada, para que se incluyan las últimas cantidades.
 
 Deberías ahora puedes actualizar las cantidades en la página y refrescar la página sin que esas cantidades desaparezcan. Sin embargo, si el programa de python es reiniciado y la página es refrescada, las cantidades serán borradas.
 
+
+-- Ejercicio 7 --
+
+Este último ejercicio utilizará una base de datos. Puedes usar mysql o cualquier otra base de datos pero yo he usado postgres. Instale el software de la base de datos. Para postgres, abra la interfaz web de pgAdmin y siga estas instrucciones para configurar un usuario, una base de datos y una tabla para el ejercicio.
+     - Cree el usuario 'shop_tutorial' con la contraseña 'tutorial' y permiso de iniciar sesión
+     - Crear una nueva base de datos 'shop', asignando al nuevo usuario 'shop_tutorial' como propietario
+     - Cree una nueva tabla 'item', en el esquema público en la base de datos 'shop' usando este script: CREAR TABLA elemento(item_id varchar, integer);
+
+Para controlar esta base de datos desde el script de python, utilicé la biblioteca de python psycopg. Instalarlo con `pip install psycopg`. Vea los documentación aquí: https://www.psycopg.org/docs/usage.html
+
+En el manipulador http de python para actualizaciones de cantidad, se necesita una consulta de inserción de sql si no hay un registro todavía para el producto, de lo contrario, una consulta de actualización de sql. Al comienzo de la secuencia de comandos de python, lea las cantidades de la base de datos para que esto está listo para la carga primera de la página.
+
+Comienza el sitio web y añade algunas cantidades. Detener y comenzar el script de Python luego actualice la página web. Las cantidades deberían seguir siendo las mismas ahora porque fueron grabadas y cargadas desde la base de datos.
